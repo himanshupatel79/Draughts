@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app='ngDraughts'>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/ngDraughts.css">
+  </head> 
+  <body ng-controller="DraughtsCtrl">
+    <div>Game Score : White {{whiteScore}} || Black : {{blackScore}}</div>
+    <div id="draughtsContainer">
+      <div>
+          <div class="row" ng-repeat="row in board">
+              <div class="square" ng-style="setClass(square)" ng-repeat="square in row track by $index" ng-click="select(square)">
+                <div ng-style="setStyling(square)" class="circle">
+                  <span class="blink">{{square.isKing ? 'King' : ''}}</span>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div>Player Turn : <span class="blink">{{player}}</span></div>
+    <script src="js/angular.min.js"></script>
+    <script src="js/ngDraughts.js"></script> 
+  </body>
+</html>

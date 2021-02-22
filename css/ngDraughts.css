@@ -1,0 +1,75 @@
+* {
+	font-family: "Verdana";
+}
+
+#draughtsContainer {
+	background-color: #966F33;
+	width: 480px;
+	height: 480px;
+	padding: 20px;
+}
+
+.row {
+	width: 100%;
+}
+
+.square {
+	float: left;
+	width: 60px;
+	height: 60px;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 94%;
+	height: 94%;
+	margin: 3%;
+	color: black;
+	text-align: center;
+	line-height: 56px;
+}
+
+.square:hover {
+	cursor: pointer;
+	opacity: .8;
+}
+
+#startGame {
+	width: 120px;
+	padding: 10px;
+	margin-top: 10px;
+	text-align: center;
+	background-color: #966F33;
+	color: white;
+}
+
+#startGame:hover {
+	color: blue;
+	cursor: pointer;
+}
+
+.blink {
+animation:1s blinker linear infinite;
+-webkit-animation:1s blinker linear infinite;
+-moz-animation:1s blinker linear infinite;
+
+	color: blue;
+}
+
+@-moz-keyframes blinker {
+	0% { opacity: 1.0; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {
+	0% { opacity: 1.0; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+}
+
+@keyframes blinker {
+	0% { opacity: 1.0; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+}
